@@ -1,5 +1,42 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Virtualizing Local Development Environments</title>
+  <meta name="author" content="Shawn Sparks">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="revealjs-3.0.0/css/reveal.css">
+  <link rel="stylesheet" href="revealjs-3.0.0/css/theme/black.css" id="theme">
+</head>
 <body>
-# Virtualizing Local Development Environments
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <script type="text/template">
+          # Virtualizing Local Development Environments
+        </script>
+      </section>
+    </div>
+  </div>
+  <script type="text/javascript" src="revealjs-3.0.0/lib/js/head.min.js"></script>
+  <script type="text/javascript" src="revealjs-3.0.0/js/reveal.js"></script>
+  <script type="text/javascript">
+    Reveal.initialize(
+      {
+				dependencies: [
+					{
+            src: 'revealjs-3.0.0/plugin/markdown/marked.js',
+            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+          },
+					{
+            src: 'revealjs-3.0.0/plugin/markdown/markdown.js',
+            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+          }
+				]
+      }
+    );
+  </script>
 </body>
 </html>

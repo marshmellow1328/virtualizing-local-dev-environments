@@ -27,19 +27,52 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <section data-markdown>
+        <section data-markdown data-separator="\n\n">
           <script type="text/template">
             # Virtualizing Local Development Environments
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            ## Long Long Ago...
 
+            ## Long Long Ago...
             * Lengthy setup instructions
             * Tedious & error prone
             * Hard to cleanup mistakes
             * Version conflicts across apps
+
+            ## Virtual Machines
+            * Pros
+              * Solves version conflicts
+              * Easy cleanup of mistakes
+            * Cons
+              * Still manual setup
+              * Doesn't travel with app code
+
+            ## Vagrant
+            * Virtual Machine + Provisioner
+            * Pros
+              * Automated and repeatable
+              * Managed in version control
+              * Reset env in a few minutes
+              * Unique per app
+            * Cons
+              * Need scriptable environment
+              * Need skillset
+              * Differences between host machines
+              * Network bandwidth
+
+            ## VM Providers
+            * VirtualBox
+            * VMWare
+            * Amazon EC2
+            * And More
+
+            ## Provisioners
+            * Shell
+            * Puppet
+            * Chef
+            * Ansible
+            * And More
+
+            ## Vagrantfile
+            *
           </script>
         </section>
 			</div>

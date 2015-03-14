@@ -1,42 +1,94 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Virtualizing Local Development Environments</title>
-  <meta name="author" content="Shawn Sparks">
+	<head>
+		<meta charset="utf-8">
+    <title>Virtualizing Local Development Environments</title>
+    <meta name="author" content="Shawn Sparks">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="revealjs-2.6.2/css/reveal.min.css">
+		<link rel="stylesheet" href="revealjs-2.6.2/css/theme/default.css" id="theme">
 
-  <link rel="stylesheet" href="revealjs-3.0.0/css/reveal.css">
-  <link rel="stylesheet" href="revealjs-3.0.0/css/theme/black.css" id="theme">
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section data-markdown>
-        <script type="text/template">
-          # Virtualizing Local Development Environments
-        </script>
-      </section>
-    </div>
-  </div>
-  <script type="text/javascript" src="revealjs-3.0.0/lib/js/head.min.js"></script>
-  <script type="text/javascript" src="revealjs-3.0.0/js/reveal.js"></script>
-  <script type="text/javascript">
-    Reveal.initialize(
-      {
-				dependencies: [
-					{
-            src: 'revealjs-3.0.0/plugin/markdown/marked.js',
-            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
-          },
-					{
-            src: 'revealjs-3.0.0/plugin/markdown/markdown.js',
-            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
-          }
-				]
-      }
-    );
-  </script>
-</body>
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="revealjs-2.6.2/lib/css/zenburn.css">
+
+    <script type="text/javascript">
+      document.write(
+        '<link rel="stylesheet" href="revealjs-2.6.2/css/print/' +
+        window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) +
+        '.css" type = text/css" media="print">'
+      );
+    </script>
+
+		<!--[if lt IE 9]>
+		  <script src="revealjs-2.6.2/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section data-markdown>
+          <script type="text/template">
+            # Virtualizing Local Development Environments
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Long Long Ago...
+
+            * Lengthy setup instructions
+            * Tedious & error prone
+            * Hard to cleanup mistakes
+            * Version conflicts across apps
+          </script>
+        </section>
+			</div>
+		</div>
+
+		<script src="revealjs-2.6.2/lib/js/head.min.js"></script>
+		<script src="revealjs-2.6.2/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize(
+        {
+  				controls: true,
+  				progress: true,
+  				history: true,
+  				center: true,
+
+          theme: Reveal.getQueryHash().theme,
+  				transition: 'slide',
+
+  				dependencies: [
+  					{
+              src: 'revealjs-2.6.2/lib/js/classList.js',
+              condition: function() { return !document.body.classList; }
+            },
+  					{
+              src: 'revealjs-2.6.2/plugin/markdown/marked.js',
+              condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+            },
+  					{
+              src: 'revealjs-2.6.2/plugin/markdown/markdown.js',
+              condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+            },
+  					{
+              src: 'revealjs-2.6.2/plugin/highlight/highlight.js',
+              async: true,
+              condition: function() { return !!document.querySelector( 'pre code' ); },
+              callback: function() { hljs.initHighlightingOnLoad(); }
+            },
+  					{
+              src: 'revealjs-2.6.2/plugin/zoom-js/zoom.js',
+              async: true
+            },
+  					{
+              src: 'revealjs-2.6.2/plugin/notes/notes.js',
+              async: true
+            }
+  				]
+  			}
+      );
+		</script>
+	</body>
 </html>
